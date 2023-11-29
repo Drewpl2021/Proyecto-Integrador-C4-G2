@@ -104,6 +104,7 @@
         @endif
     </div>
 </div>
+                        <!--fin Tabla lista de items   -->
 
 <!--Scripts - Sweetalert   -->
 @push('js')
