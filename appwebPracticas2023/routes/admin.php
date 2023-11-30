@@ -11,3 +11,4 @@ Route::get('/rols',RoleManagement::class)->middleware('can:Ver dashboard')->name
 Route::get('/convocatorias',ConvocatoriaManagemebt::class)->middleware('can:Ver dashboard')->name('convocatorias');
 Route::get('/sedes',SedeManagemebt::class)->middleware('can:Ver dashboard')->name('sedes');
 
+//las rutas del admin
