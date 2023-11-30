@@ -117,7 +117,7 @@ class IinduccionManagement extends Component
     }
     public function index()
     {
-        $Iinduccion = Induccion::all(); // Obtiene todos los usuarios
+        $Iinduccion = Induccion::all(); // Obtiener todos los usuarios
         return view('welcome', ['Iinduccions' => $Iinduccion]); // Pasa los usuarios a la vista
     }
 }
