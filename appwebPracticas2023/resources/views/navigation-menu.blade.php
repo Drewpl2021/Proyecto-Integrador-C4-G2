@@ -140,8 +140,20 @@
                                     </a>
                                 @endcan
 
+                                @can('Subir Culminacion')
+                                    <a class="" href="{{ route('student.culminacion') }}"
+                                        :active="request() - > routeIs('student.culminacion')"><x-button icon="folder-open" style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Culminaciones</p>
+                                        </x-button>
+                                    </a>
+                                @endcan
 
-                                <!--Cerrar secion-->
+
+                                <!--Cerrar sesion-->
                                 <div class="cerrar-sesion" style="margin-top: 60px;">
                                     <div class=" sm:flex sm:items-center sm:ml-6 ">
                                         <!-- Teams Dropdown -->
