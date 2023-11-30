@@ -12,4 +12,5 @@
             <x-button primary label="Save" wire:click="store()" />
         </div>
     </x-slot>
+                <!--Registro de Plan-->
 </x-modal.card>
