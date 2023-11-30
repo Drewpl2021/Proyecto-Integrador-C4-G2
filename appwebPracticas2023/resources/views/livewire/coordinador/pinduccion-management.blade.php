@@ -13,7 +13,7 @@
                 <div class="mb-2 w-full">
                     <x-input icon="search" placeholder="Buscar registro" wire:model.live="search" />
                 </div>
-                <!--Boton de Tomar asistencia   -->
+                <!--Boton de Tomar asistencias   -->
                 <div class="mb-1 ml-10">
                     <x-button green style=" color: white;" class="hover:bg-green-400 bg-green-500" icon="user-circle" wire:click="toggleOptions"
                     label="{{ $showOptions ? 'Guardar' : 'Asistencia' }}"></x-button>
