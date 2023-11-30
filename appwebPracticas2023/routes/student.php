@@ -13,5 +13,5 @@ Route::get('/gestionarplan/{id}/download', 'GestionarplanController@download');
 Route::post('/upload', [PdfController::class, 'upload']);
 Route::get('/download/{pdf}', [GestionarplanController::class, 'download']);
 
-
+//Rutas del student
 
