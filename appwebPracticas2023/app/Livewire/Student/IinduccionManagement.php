@@ -112,7 +112,7 @@ class IinduccionManagement extends Component
     }
     public function closeModal()
     {
-        $this->selectedSedeId = null; // Restablece selectedSedeId
+        $this->selectedSedeId = null; // Restablecer selectedSedeId
         $this->isOpen = false;
     }
     public function index()
