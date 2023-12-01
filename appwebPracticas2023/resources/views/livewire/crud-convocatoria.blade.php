@@ -85,7 +85,7 @@
                                     <i class="fas fa-edit"></i>
                                 </x-button>
                                 <x-danger-button wire:click="$emit('deleteItem',{{ $item->id }})">
-                                    <!-- Usamos metodos magicos -->
+                                    <!-- Usamos metodo magicos -->
                                     <i class="fas fa-trash"></i>
                                 </x-danger-button>
                             </td>
