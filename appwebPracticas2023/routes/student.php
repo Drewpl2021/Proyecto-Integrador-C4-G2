@@ -11,6 +11,8 @@ Route::get('/induccions',IinduccionManagement::class)->middleware('can:Inscribir
 Route::get('/subirsede',SubirsedeManagement::class)->middleware('can:Subir Sedes')->name('subirsede');
 Route::get('/gestionarplan/{id}/download', 'GestionarplanController@download');
 Route::post('/upload', [PdfController::class, 'upload']);
+<!--Nueva Ruta Para descargar PDF
+    -->
 Route::get('/download/{pdf}', [GestionarplanController::class, 'download']);
 
 
