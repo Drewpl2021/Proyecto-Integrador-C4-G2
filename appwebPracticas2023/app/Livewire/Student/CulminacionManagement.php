@@ -13,10 +13,11 @@ class CulminacionManagement extends Component
     use WithPagination;
     public $isOpen=false;
     public $search;
+    public $enctype;
     public CulminacionForm $form;
     use Actions;
     public function render(){
-        $culminacion=Cartaculminacion::where('sede_id','like','%'.$this->search.'%')->latest('id')->paginate(6);
+        $culminacion=Cartaculminacion::where('contratoempresa_id','like','%'.$this->search.'%')->latest('id')->paginate(6);
         return view('livewire.student.culminacion-management', compact('culminacion'));
     }
     public function create(){
@@ -30,6 +31,7 @@ class CulminacionManagement extends Component
 
         if(!isset($this->form->culminacion->id)){
             Cartaculminacion::create($this->form->all());
+            $this->enctype="multipart/form-data";
             $this->dialog()->success(
                 $title = 'Mensaje del sistema',
                 $description = 'Ficha Culminacion Creada Correctamente'
@@ -37,6 +39,7 @@ class CulminacionManagement extends Component
         }else{
             $culminacion=Cartaculminacion::find($this->form->culminacion->id);
             $culminacion->update($this->form->all());
+            $this->enctype="multipart/form-data";
             $this->dialog()->success(
                 $title = 'Mensaje del sistema',
                 $description = 'Se Actualizo Correctamente'
@@ -47,6 +50,7 @@ class CulminacionManagement extends Component
 
     public function edit(Cartaculminacion $culminacion){
         //$this->form=$period->toArray();
+        $this->enctype="multipart/form-data";
         $this->form->setForm($culminacion);
         $this->isOpen=true;
     }

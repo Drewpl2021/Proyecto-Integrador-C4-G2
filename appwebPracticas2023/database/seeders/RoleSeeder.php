@@ -23,7 +23,7 @@ class RoleSeeder extends Seeder
         $role->syncPermissions([1,2,3,4,5]);
 
         $role=Role::create(['name'=>'Estudiante']);
-        $role->syncPermissions(['Listar empresas','Solicitar carta','Subir Documentos','Eliminar documentos', 'Inscribirse Induccion', 'Subir Sedes', 'Subir Culminacion']);
+        $role->syncPermissions(['Listar empresas','Solicitar carta','Subir Documentos','Eliminar documentos', 'Inscribirse Induccion', 'Subir Sedes', 'Subir Culminacion', 'Reporte']);
 
     }
 }

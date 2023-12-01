@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cartaculminacions', function (Blueprint $table) {
+        Schema::create('reportes', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion');
-            $table->string('adjuntar_culminacion');
-            $table->unsignedBigInteger('contratoempresa_id');
-            $table->foreign('contratoempresa_id')->references('id')->on('contratoempresas')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cartaculminacions');
+        Schema::dropIfExists('reportes');
     }
 };

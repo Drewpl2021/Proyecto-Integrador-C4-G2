@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('contratoempresas', function (Blueprint $table) {
             $table->id();
-            $table->binary('adjuntar_contrato');
+            $table->string('adjuntar_contrato');
             $table->unsignedBigInteger('cartaaceptacion_id');
             $table->foreign('cartaaceptacion_id')->references('id')->on('cartaaceptacions')->onDelete('cascade');
             $table->timestamps();

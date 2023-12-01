@@ -10,4 +10,12 @@ class Cartaculminacion extends Model
     use HasFactory;
     protected $guarded = ['culminacion'];
 
+    protected $fillable=[
+        'culmi','culminacion'
+    ];
+
+    public function contratoempresa(){
+        return $this->belongToMany(Contratoempresa::class);
+    }
+
 }

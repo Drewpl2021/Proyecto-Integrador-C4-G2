@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ConvocatoriaController;
 use App\Http\Controllers\SedeController;
+use App\Models\Contratoempresa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,8 +27,16 @@ Route::put('/sedes/{Sede}',[SedeController::class,'update']);
 Route::delete('/sedes/{Sede}',[SedeController::class,'destroy']);
 Route::get('/sedes/{Sede}',[SedeController::class,'show']);
 
+Route::get('/contratos',[Contratoempresa::class,'index']);
+Route::post('/contratos',[Contratoempresa::class,'store']);
+Route::put('/contratos/{Contratoempresa}',[Contratoempresa::class,'update']);
+Route::delete('/contratos/{Contratoempresa}',[Contratoempresa::class,'destroy']);
+Route::get('/contratos/{Contratoempresa}',[Contratoempresa::class,'show']);
+
+
 Route::get('/convocatorias',[ConvocatoriaController::class,'index']);
 Route::post('/convocatorias',[ConvocatoriaController::class,'store']);
 Route::put('/convocatorias/{Convocatoria}',[ConvocatoriaController::class,'update']);
 Route::delete('/convocatorias/{Convocatoria}',[ConvocatoriaController::class,'destroy']);
 Route::get('/convocatorias/{Convocatoria}',[ConvocatoriaController::class,'show']);
+    

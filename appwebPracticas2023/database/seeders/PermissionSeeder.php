@@ -58,5 +58,8 @@ class PermissionSeeder extends Seeder
         Permission::create([
             'name'=>'Subir Culminacion'
         ]);
+        Permission::create([
+            'name'=>'Reporte'
+        ]);
     }
 }

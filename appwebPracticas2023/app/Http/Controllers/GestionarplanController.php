@@ -14,3 +14,5 @@ class GestionarplanController extends Controller
         return Storage::download($pdf);
     }
 }
+
+
