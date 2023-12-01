@@ -23,6 +23,7 @@
     <x-slot name="footer">
         <div class="flex justify-end gap-x-2">
             <x-button flat label="Cancel" x-on:click="close()" />
+                <!--Aqui se puede subir con el boton store-->
             <x-button primary label="Save" wire:click="store()" />
         </div>
     </x-slot>
