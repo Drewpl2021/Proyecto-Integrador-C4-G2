@@ -18,7 +18,7 @@
                     <x-button green style=" color: white;" class="hover:bg-green-400 bg-green-500" icon="user-circle" wire:click="toggleOptions"
                     label="{{ $showOptions ? 'Guardar' : 'Asistencia' }}"></x-button>
                 </div>
-                <!--Boton nuevo   -->
+                <!--Boton nuevos   -->
                 <div class="mb-1 ml-10">
                     <x-button primary href="{{ route('coordinador.Ginduccions') }}" label="Regresar" icon="chevron-double-left"  spinner=""></x-button>
 
