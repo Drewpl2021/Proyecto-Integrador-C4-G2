@@ -8,7 +8,7 @@
 <div class=" mx-auto sm:px-6 lg:px-8">
     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
         <div class="flex items-center justify-between">
-            <!--Input de busqueda   -->
+            <!--Input de busquedas   -->
             <div class="flex items-center p-2 rounded-md flex-1">
                 <label class="w-full relative text-gray-400 focus-within:text-gray-600 block">
                     <svg class="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"
