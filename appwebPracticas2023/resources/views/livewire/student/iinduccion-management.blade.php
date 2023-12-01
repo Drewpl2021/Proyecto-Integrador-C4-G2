@@ -53,7 +53,7 @@
                 </div>
 
             </div>
-
+<!--Costo pero al final si salio-->
 
             <div class="px-6 py-3">
                 {{ $Iinduccions->links() }}

@@ -20,7 +20,7 @@
                         placeholder="Buscar equipo..." />
                 </label>
             </div>
-            <!--Boton nuevo   -->
+            <!--Boton nuevoo   -->
             <div class="lg:ml-40 ml-10 space-x-8">
                 <button wire:click="create()"
                     class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
@@ -85,7 +85,7 @@
                                     <i class="fas fa-edit"></i>
                                 </x-button>
                                 <x-danger-button wire:click="$emit('deleteItem',{{ $item->id }})">
-                                    <!-- Usamos metodos magicos -->
+                                    <!-- Usamos metodo magicos -->
                                     <i class="fas fa-trash"></i>
                                 </x-danger-button>
                             </td>
@@ -105,7 +105,7 @@
     </div>
 </div>
 
-<!--Scripts - Sweetalert   -->
+<!--Scripts - Sweetalerts   -->
 @push('js')
     <script>
         Livewire.on('deleteItem', id => {

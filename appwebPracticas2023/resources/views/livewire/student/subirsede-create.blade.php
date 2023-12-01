@@ -34,6 +34,7 @@
             <div class="my-2 md:mr-2 md:mb-0 w-full">
                 <x-input label="Ubicacion de la Sede" wire:model="form.ubicacion" />
             </div>
+                    <!--Hasta lleg o Pastor-->
             <x-slot name="footer">
                 <div class="flex justify-end gap-x-2">
                     <x-button flat label="Cancel" x-on:click="close()" />

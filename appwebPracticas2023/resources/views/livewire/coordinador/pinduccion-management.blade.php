@@ -9,16 +9,16 @@
             class=" overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl"
             style="background-color: rgba(255, 251, 251, 0.521);">
             <div class="flex items-center justify-between dark:text-gray-400">
-                <!--Input de busqueda   -->
+                <!--Input de busquedas   -->
                 <div class="mb-2 w-full">
                     <x-input icon="search" placeholder="Buscar registro" wire:model.live="search" />
                 </div>
-                <!--Boton de Tomar asistencia   -->
+                <!--Boton de Tomar asistencias   -->
                 <div class="mb-1 ml-10">
                     <x-button green style=" color: white;" class="hover:bg-green-400 bg-green-500" icon="user-circle" wire:click="toggleOptions"
                     label="{{ $showOptions ? 'Guardar' : 'Asistencia' }}"></x-button>
                 </div>
-                <!--Boton nuevo   -->
+                <!--Boton nuevos   -->
                 <div class="mb-1 ml-10">
                     <x-button primary href="{{ route('coordinador.Ginduccions') }}" label="Regresar" icon="chevron-double-left"  spinner=""></x-button>
 

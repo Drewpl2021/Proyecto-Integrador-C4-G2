@@ -28,6 +28,9 @@ Route::get('/contratos',ContratoManagement::class)->middleware('can:Inscribirse 
 Route::get('/gestionplans',GestionplanManagement::class)->middleware('can:Inscribirse Induccion')->name('gestionplans');
 
 
+<<<<<<< HEAD
 //Crisho
 
 Route::get('/convocatorias',LconvocatoriaManagement::class)->middleware('can:Inscribirse Convocatoria')->name('convocatorias');
+=======
+>>>>>>> b9867c7031308239d8fef9aee89803cd8484b428

@@ -38,7 +38,7 @@ class PinduccionManagement extends Component
     public function mount()
     {
         $this->induccionId = request()->input('induccion');
-        //dd($this->induccionId);  Volcado de la variable para depuración
+        //dd($this->induccionId);  Volcado de la variables para depuración
     }
 
     public function toggleOptions() {
