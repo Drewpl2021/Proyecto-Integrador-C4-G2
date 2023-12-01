@@ -9,7 +9,7 @@
             class=" overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl"
             style="background-color: rgba(255, 251, 251, 0.521);">
             <div class="flex items-center justify-between dark:text-gray-400">
-                <!--Input de busqueda   -->
+                <!--Input de busquedas   -->
                 <div class="mb-2 w-full">
                     <x-input icon="search" placeholder="Buscar registro" wire:model.live="search" />
                 </div>
