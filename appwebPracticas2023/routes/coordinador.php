@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/Ginduccions',GinduccionManagement::class)->middleware('can:Gestionar Induccion')->name('Ginduccions');
 Route::get('/Gsedes',SedeManagemebt::class)->middleware('can:Gestionar Sedes')->name('Gsedes');
 Route::get('/Pinduccion',PinduccionManagement::class)->middleware('can:Gestionar Induccion')->name('Pinduccion');
+<!--Nueva Ruta Agregada-->
 Route::get('/coordinador/Pinduccion/{induccion}', \App\Livewire\Coordinador\PinduccionManagement::class);
+<!--Nueva Ruta Agregada-->
 
 
 
