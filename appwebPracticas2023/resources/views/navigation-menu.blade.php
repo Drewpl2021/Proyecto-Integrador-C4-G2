@@ -5,7 +5,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex">
 
-                    <!--Inicio Barraa leteral-->
+                    <!--Inicio Barraa leterals-->
                     <div class="sidebar">
                         <aside style="background-color: rgba(0, 0, 0, 0.39);"
                             class="bg-white overflow-hidden shadow-sm -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)]
