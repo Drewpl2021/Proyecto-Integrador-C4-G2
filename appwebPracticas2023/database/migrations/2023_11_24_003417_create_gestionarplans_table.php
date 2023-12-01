@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('gestionarplans', function (Blueprint $table) {
             $table->id();
-            $table->binary('adjuntarplan');
+            $table->string('adjuntarplan');
             $table->enum('estado',['Verificado','En Proceso'])->default('En Proceso');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

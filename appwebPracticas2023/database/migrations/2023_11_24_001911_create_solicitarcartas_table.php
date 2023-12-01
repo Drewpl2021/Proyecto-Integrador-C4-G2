@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('posibles_actividades');
             $table->string('area_competencia');
             $table->enum('estado',['Aceptado','Proceso'])->default('Proceso');
-            $table->unsignedBigInteger('carta_presentacion_id');
-            $table->foreign('carta_presentacion_id')->references('id')->on('cartas_presentacions')->onDelete('cascade');
-            $table->unsignedBigInteger('student_id');
-            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
+            $table->string('carta_presentacion');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('sede_id');
             $table->foreign('sede_id')->references('id')->on('sedes')->onDelete('cascade');
             $table->timestamps();

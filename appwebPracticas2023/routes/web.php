@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\VersedesManagement;
 use App\Livewire\Student\VersedesManagement as StudentVersedesManagement;
 use App\Livewire\Student\IinduccionManagement;
+use App\Livewire\Student\LconvocatoriaManagement;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,5 @@ Route::get('/gestionarplan/{id}/download', [GestionarplanController::class, 'dow
 
 
 Route::get('/', [IinduccionManagement::class, 'index']);
-
-
 
 

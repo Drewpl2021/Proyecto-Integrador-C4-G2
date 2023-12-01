@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('student_convocatories', function (Blueprint $table) {
             $table->id();
             $table->enum('estado',['Aceptado','Rechazado'])->default('Rechazado');
-            $table->unsignedBigInteger('sede_id');
-            $table->foreign('sede_id')->references('id')->on('sedes')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('convocatoria_id');
             $table->foreign('convocatoria_id')->references('id')->on('convocatorias')->onDelete('cascade');
             $table->timestamps();

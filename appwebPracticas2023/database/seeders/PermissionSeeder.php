@@ -43,6 +43,9 @@ class PermissionSeeder extends Seeder
         Permission::create([
             'name'=>'Eliminar documentos'
         ]);
+
+
+
         Permission::create([
             'name'=>'Inscribirse Induccion'
         ]);
@@ -54,6 +57,39 @@ class PermissionSeeder extends Seeder
         ]);
         Permission::create([
             'name'=>'Subir Sedes'
+        ]);
+        Permission::create([
+            'name'=>'Carta Presentacion'
+        ]);
+        Permission::create([
+            'name'=>'Recibir Carta Presentacion'
+        ]);
+        //Pastorino
+        Permission::create([
+            'name'=>'Descargar Documentos'
+        ]);
+        Permission::create([
+            'name'=>'Ver documentos'
+        ]);
+        Permission::create([
+            'name'=>'Eliminar Archivo Evaluador'
+        ]);
+        Permission::create([
+            'name'=>'Subir Archivo Evaluador'
+        ]);
+        Permission::create([
+            'name'=>'Ver induccion'
+        ]);
+
+        //Chisho
+        Permission::create([
+            'name'=>'Gestionar Convocatoria'
+        ]);
+        Permission::create([
+            'name'=>'Inscribirse Convocatoria'
+        ]);
+        Permission::create([
+            'name'=>'Gestionar Visitas'
         ]);
 
     }

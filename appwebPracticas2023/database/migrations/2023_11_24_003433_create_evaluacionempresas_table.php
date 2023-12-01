@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('evaluacionempresas', function (Blueprint $table) {
             $table->id();
-            $table->binary('adjuntar_evaluacion');
+            $table->string('adjuntar_evaluacion');
             $table->timestamps();
         });
     }

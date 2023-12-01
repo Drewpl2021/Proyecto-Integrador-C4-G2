@@ -29,6 +29,7 @@ class GinduccionManagement extends Component
 
     public function store()
     {
+
         $this->validate();
 
         if (!isset($this->form->ginduccion->id)) {

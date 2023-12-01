@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -27,6 +27,8 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+
 
     <!-- Scripts -->
     <script type="module">
@@ -36,8 +38,11 @@
         window.$RefreshSig$ = () => (type) => type
         window.__vite_plugin_react_preamble_installed__ = true
     </script>
-
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
     <script defer="" data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
@@ -49,7 +54,9 @@
     @wireUiScripts
     <!-- Styles -->
 
-    <style type="text/css" data-vite-dev-id="C:/Users/CASA/Downloads/material-tailwind-dashboard-react-main/public/css/tailwind.css">/*
+    <style type="text/css"
+        data-vite-dev-id="C:/Users/CASA/Downloads/material-tailwind-dashboard-react-main/public/css/tailwind.css">
+        /*
 
     @livewireStyles
 </head>
@@ -64,12 +71,12 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white bg-opacity-50" style="background-color: rgba(0, 0, 0, 0.39); margin-left:25%; margin-right:12%; border-radius: 20px  20px 20px 20px;">
+<header class="bg-white bg-opacity-50" style="background-color: rgba(0, 0, 0, 0.39); margin-left:25%; margin-right:12%; border-radius: 20px  20px 20px 20px;">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" >
                         {{ $header }}
                     </div>
                 </header>
-            @endif
+@endif
 
             <!-- Page Content -->
             <main style="">

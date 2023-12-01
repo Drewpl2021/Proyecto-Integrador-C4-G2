@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('evaluaciones', function (Blueprint $table) {
             $table->id();
-            $table->binary('adjuntar_evaluacion');
+            $table->string('adjuntar_evaluacion');
             $table->unsignedBigInteger('visita_id');
             $table->foreign('visita_id')->references('id')->on('visitas')->onDelete('cascade');
             $table->timestamps();

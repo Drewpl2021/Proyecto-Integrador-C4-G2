@@ -13,4 +13,8 @@ class Sede extends Model
     {
         return $this->belongsTo(Convocatoria::class, 'convocatoria_id');
     }
+    public function cartaaceptacions()
+    {
+    return $this->hasMany(Cartaaceptacion::class);
+    }
 }

@@ -8,7 +8,7 @@
                     <!--Inicio Barraa leteral-->
                     <div class="sidebar">
                         <aside style="background-color: rgba(0, 0, 0, 0.39);"
-                            class="bg-white overflow-hidden shadow-sm -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)]
+                            class="bg-white overflow-auto shadow-sm -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)]
                          w-72 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100">
                             <div class="relative" style="margin-top: 37px">
                                 <a class="py-6 px-8 text-center" href="/">
@@ -92,7 +92,8 @@
 
                                 @can('Gestionar Induccion')
                                     <a class="" href="{{ route('coordinador.Ginduccions') }}"
-                                        :active="request() - > routeIs('coordinador.Ginduccions')"><x-button icon="user-circle" style="border: transparent"
+                                        :active="request() - > routeIs('coordinador.Ginduccions')"><x-button
+                                            icon="user-circle" style="border: transparent"
                                             class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
                                             type="button">
                                             <p
@@ -102,9 +103,23 @@
                                     </a>
                                 @endcan
 
+                                @can('Carta Presentacion')
+                                    <a class="" href="{{ route('coordinador.Validarcartas') }}"
+                                        :active="request() - > routeIs('coordinador.Validarcartas')"><x-button
+                                            icon="user-circle" style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Solicitudes</p>
+                                        </x-button>
+                                    </a>
+                                @endcan
+
                                 @can('Gestionar Sedes')
                                     <a class="" href="{{ route('coordinador.Gsedes') }}"
-                                        :active="request() - > routeIs('coordinador.Gsedes')"><x-button style="border: transparent; " icon="book-open"
+                                        :active="request() - > routeIs('coordinador.Gsedes')"><x-button
+                                            style="border: transparent; " icon="book-open"
                                             class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
                                             type="button">
                                             <p
@@ -114,11 +129,25 @@
                                     </a>
                                 @endcan
 
+                                @can('Gestionar Convocatoria')
+                                <a class="" href="{{ route('coordinador.convocatorias') }}"
+                                :active="request() - > routeIs('coordinador.convocatorias')"><x-button
+                                    style="border: transparent; " icon="book-open"
+                                    class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                    type="button">
+                                    <p
+                                        class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                        Gestionar Convocatoria</p>
+                                </x-button>
+                            </a>
+                                @endcan
+
 
 
                                 @can('Inscribirse Induccion')
                                     <a class="" href="{{ route('student.induccions') }}"
-                                        :active="request() - > routeIs('student.induccions')"><x-button icon="calendar" style="border: transparent"
+                                        :active="request() - > routeIs('student.induccions')"><x-button icon="calendar"
+                                            style="border: transparent"
                                             class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
                                             type="button">
                                             <p
@@ -126,16 +155,133 @@
                                                 Inducciones </p>
                                         </x-button>
                                     </a>
-                                @endcan
 
-                                @can('Subir Sedes')
-                                    <a class="" href="{{ route('student.subirsede') }}"
-                                        :active="request() - > routeIs('student.subirsede')"><x-button icon="folder-open" style="border: transparent"
+                                    <a class="" href="{{ route('student.cartaaceptacions') }}"
+                                        :active="request() - > routeIs('student.cartaaceptacions')"><x-button
+                                            icon="calendar" style="border: transparent"
                                             class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
                                             type="button">
                                             <p
                                                 class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
-                                                Carta de Presentacion</p>
+                                                Subir Carta de Aceptacion </p>
+                                        </x-button>
+                                    </a>
+
+                                    <a class="" href="{{ route('student.contratos') }}"
+                                        :active="request() - > routeIs('student.contratos')"><x-button icon="calendar"
+                                            style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Subir Contrato </p>
+                                        </x-button>
+                                    </a>
+
+                                    <a class="" href="{{ route('student.gestionplans') }}"
+                                        :active="request() - > routeIs('student.gestionplans')"><x-button icon="calendar"
+                                            style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Gestionar Plan </p>
+                                        </x-button>
+                                    </a>
+                                @endcan
+                                @can('Inscribirse Convocatoria')
+                                <a class="" href="{{ route('student.convocatorias') }}"
+                                :active="request() - > routeIs('student.convocatorias')"><x-button icon="calendar"
+                                    style="border: transparent"
+                                    class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                    type="button">
+                                    <p
+                                        class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                        Convocatorias </p>
+                                </x-button>
+                            </a>
+                                @endcan
+
+                                @can('Gestionar Visitas')
+                                <a class="" href="{{ route('coordinador.visitas') }}"
+                                :active="request() - > routeIs('coordinador.visitas')"><x-button icon="folder-open"
+                                    style="border: transparent"
+                                    class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                    type="button">
+                                    <p
+                                        class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                        Gestionar Visitas</p>
+                                </x-button>
+                            </a>
+                                @endcan
+
+                                @can('Subir Sedes')
+                                    <a class="" href="{{ route('student.subirsede') }}"
+                                        :active="request() - > routeIs('student.subirsede')"><x-button icon="folder-open"
+                                            style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Soliciar Carta de Presentacion</p>
+                                        </x-button>
+                                    </a>
+                                @endcan
+                                @can('Recibir Carta Presentacion')
+                                    <a class="" href="{{ route('student.missolicitudes') }}"
+                                        :active="request() - > routeIs('student.missolicitudes')"><x-button
+                                            icon="user-circle" style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Mis Solicitudes</p>
+                                        </x-button>
+                                    </a>
+                                @endcan
+
+                                @can('Subir Archivo Evaluador')
+                                    <a class="" href="{{ route('supervisor.visitas') }}"
+                                        :active="request() - > routeIs('supervisor.visitas')"><x-button icon="user-circle"
+                                            style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Registro Visitas</p>
+                                        </x-button>
+                                    </a>
+
+                                    <a class="" href="{{ route('supervisor.evaluaciones') }}"
+                                        :active="request() - > routeIs('supervisor.evaluaciones')"><x-button
+                                            icon="user-circle" style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Ficha Evaluacion</p>
+                                        </x-button>
+                                    </a>
+                                @endcan
+                                @can('Ver documentos')
+                                    <a class="" href="{{ route('coordinador.cartaaceptacions') }}"
+                                        :active="request() - > routeIs('supervisor.evaluaciones')"><x-button
+                                            icon="user-circle" style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Ver Carta de Aceptacion</p>
+                                        </x-button>
+                                    </a>
+                                    <a class="" href="{{ route('coordinador.modeloplans') }}"
+                                        :active="request() - > routeIs('supervisor.evaluaciones')"><x-button
+                                            icon="user-circle" style="border: transparent"
+                                            class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white bg-transparent bg-opacity-50 shadow-md shadow-orange-500/20 hover:bg-yellow-500 hover:text-black active:opacity-[0.85] w-full flex items-center gap-4 px-4 capitalize"
+                                            type="button">
+                                            <p
+                                                class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">
+                                                Ver Planes</p>
                                         </x-button>
                                     </a>
                                 @endcan
@@ -406,6 +552,23 @@
             </div>
 
             <style>
+
+
+                .sidebar aside::-webkit-scrollbar {
+                    width: 10px;
+                }
+
+                .sidebar aside::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                .sidebar aside::-webkit-scrollbar-thumb {
+                    background: transparent;
+                }
+
+                .sidebar aside {
+                    overflow: auto;
+                }
                 .icon-container {
                     margin-left: 870px;
                 }

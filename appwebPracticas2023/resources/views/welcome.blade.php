@@ -18,12 +18,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
 </head>
-<body style="position: relative; background: url('/images/Fondoprincipal.jpg') no-repeat center center fixed;
+
+<body
+    style="position: relative; background: url('/images/Fondoprincipal.jpg') no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;">
-    <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(255, 255, 255, 0.5); z-index: -1;"></div>
+    <div
+        style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(255, 255, 255, 0.5); z-index: -1;">
+    </div>
     <!--Encabezado-->
     <nav x-data="{ open: false }"
         style="background-color: #041433;
@@ -149,9 +153,9 @@ background-size: cover;">
             style="  margin-right: 150px; margin-left: 150px; background-color: #041433;
     background-image: linear-gradient(45deg, #041433 21%, #507fc8 67%, #70fff7 100%);">
         <br><br>
+
+
         <!--Carousel-->
-
-
         <div style="display: flex; justify-content: space-around; margin-left: 150px ; margin-right: 150px;">
 
 
@@ -182,7 +186,7 @@ background-size: cover;">
                                                         <a href="http://127.0.0.1:8000/student/induccions"
                                                             id="basura" style=" "
                                                             class=" px-8 py-3 styled-button">Participar
-                                                    </a>
+                                                        </a>
 
                                                     </div>
 
@@ -213,6 +217,9 @@ background-size: cover;">
         </div>
     </div>
     <br><br><br><br><br><br>
+
+
+
 
 
 

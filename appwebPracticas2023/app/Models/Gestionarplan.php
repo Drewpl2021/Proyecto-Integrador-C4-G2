@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Gestionarplan extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
-    protected $fillable = [
-        'adjuntarplan',
-        // ...otras propiedades que se pueden asignar en masa...
-    ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

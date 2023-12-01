@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cartas_presentacions', function (Blueprint $table) {
             $table->id();
-            $table->binary('carta_pre');
+            $table->string('carta_pre');
             $table->unsignedBigInteger('sede_id');
             $table->foreign('sede_id')->references('id')->on('sedes')->onDelete('cascade');
             $table->unsignedBigInteger('student_id');

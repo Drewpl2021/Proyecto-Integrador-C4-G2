@@ -6,6 +6,7 @@ use App\Livewire\Forms\SedeForm;
 use App\Livewire\Forms\SolicartaForm;
 use App\Livewire\Forms\SubirsedeForm;
 use App\Models\Sede;
+use App\Models\Solicitarcarta;
 use Livewire\Component;
 use Livewire\WithPagination;
 use WireUi\Traits\Actions;
@@ -18,11 +19,11 @@ class SubirsedeManagement extends Component
     public $search;
     public $selectedSedeId;
     public SubirsedeForm $form;
-    //public SolicartaForm $formas;
+    //public SolicartaForm $pig;
     use Actions;
     public function render()
     {
-        $subirsedes = Sede::where('razon_social', 'like', '%' . $this->search . '%')->orderBy('id', 'asc')->paginate(8);
+        $subirsedes = Sede::where('razon_social', 'like', '%' . $this->search . '%')->orderBy('id', 'desc')->paginate(8);
         $selectedSede = null;
         if ($this->selectedSedeId) {
             $selectedSede = Sede::find($this->selectedSedeId);
@@ -83,19 +84,20 @@ class SubirsedeManagement extends Component
     public function solicarta(){
         $this->shOpen = true;
     }
-    public function guardar()
+
+    /*public function guardar()
     {
         $this->validate();
 
-        if (!isset($this->formas->subirsede->id)) {
-            Sede::create($this->formas->all());
+        if (!isset($this->pig->solicarta->id)) {
+            Solicitarcarta::create($this->fopigrmas->all());
             $this->dialog()->success(
                 $title = 'Mensaje del sistema',
                 $description = 'Se añadio añadio una Sede'
             );
         } else {
-            $subirsede = Sede::find($this->form->subirsede->id);
-            $subirsede->update($this->form->all());
+            $solicarta = Solicitarcarta::find($this->pig->solicarta->id);
+            $solicarta->update($this->form->all());
             $this->dialog()->success(
                 $title = 'Mensaje del sistema',
                 $description = 'Sede Actualizada '
@@ -104,4 +106,5 @@ class SubirsedeManagement extends Component
         $this->reset(['shOpen']);
     }
 
+}*/
 }

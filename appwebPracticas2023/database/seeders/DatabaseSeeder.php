@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Convocatoria;
 use App\Models\Induccion;
 use App\Models\Sede;
 use App\Models\student;
@@ -33,6 +34,8 @@ class DatabaseSeeder extends Seeder
         Induccion::factory(10)->create();
         student::factory(50)->create();
         Sede::factory(20)->create();
+        Convocatoria::factory(10)->create();
+
 
     }
 }
