@@ -25,5 +25,6 @@
             <x-button flat label="Cancel" x-on:click="close()" />
             <x-button primary label="Save" wire:click="store()" />
         </div>
+                <!--Formato Nuevo-->
     </x-slot>
 </x-modal.card>
