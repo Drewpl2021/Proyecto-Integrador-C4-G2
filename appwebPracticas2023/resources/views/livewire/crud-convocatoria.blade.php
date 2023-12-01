@@ -105,7 +105,7 @@
     </div>
 </div>
 
-<!--Scripts - Sweetalert   -->
+<!--Scripts - Sweetalerts   -->
 @push('js')
     <script>
         Livewire.on('deleteItem', id => {
