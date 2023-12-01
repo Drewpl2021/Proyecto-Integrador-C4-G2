@@ -12,4 +12,4 @@ Route::get('/convocatorias',ConvocatoriaManagemebt::class)->middleware('can:Ver 
 Route::get('/sedes',SedeManagemebt::class)->middleware('can:Ver dashboard')->name('sedes');
 
 <!--Ruta nueva Agregada-->
-
+adasd
