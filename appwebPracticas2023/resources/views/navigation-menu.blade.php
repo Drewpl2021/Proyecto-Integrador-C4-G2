@@ -141,7 +141,7 @@
                                 @endcan
 
 
-                                <!--Cerrar secion-->
+                                <!--Cerrar secion--s>
                                 <div class="cerrar-sesion" style="margin-top: 60px;">
                                     <div class=" sm:flex sm:items-center sm:ml-6 ">
                                         <!-- Teams Dropdown -->
