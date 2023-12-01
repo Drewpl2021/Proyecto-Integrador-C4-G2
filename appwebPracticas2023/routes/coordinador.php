@@ -10,6 +10,6 @@ Route::get('/Gsedes',SedeManagemebt::class)->middleware('can:Gestionar Sedes')->
 Route::get('/Pinduccion',PinduccionManagement::class)->middleware('can:Gestionar Induccion')->name('Pinduccion');
 Route::get('/coordinador/Pinduccion/{induccion}', \App\Livewire\Coordinador\PinduccionManagement::class);
 
-//Hasta aca llego montes
+
 
 
