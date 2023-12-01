@@ -10,5 +10,6 @@
             <x-button flat label="Cancel" x-on:click="close()" />
             <x-button primary label="Save" wire:click="guardar() " />
         </div>
+                <!--Nueva forma de agregar Vista-->
     </x-slot>
 </x-modal.card>
