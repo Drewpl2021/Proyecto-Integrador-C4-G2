@@ -1,1 +1,1 @@
-# Proyecto-Integrador-C4-G2
+# Proyecto-Integrador-C4 - G2
